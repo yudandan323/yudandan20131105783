@@ -14,8 +14,6 @@ IplImage* DoPyrDown(IplImage* image,int filter=IPL_GAUSSIAN_5x5)
 	cvReleaseImage(&image);  
     return outImage; 
 }
-
-
 int main( int argc, char** argv )  
 { 
 	CvCapture * capture;
@@ -39,7 +37,7 @@ int main( int argc, char** argv )
     assert(NULL != capture); 
 	IplImage* frame;
 	*/
-	 char keyCode;
+	char keyCode;
 	while((keyCode = cvWaitKey(30)))  
     {  
         //表示按下了ESC键，退出  
@@ -85,8 +83,6 @@ int main( int argc, char** argv )
 	 cvReleaseCapture(&capture);
 	 cvDestroyAllWindows();*/
 	 cvReleaseImage(&frame);
-	
-	 
 	 cvDestroyWindow("Camera Show");
 }   
 
