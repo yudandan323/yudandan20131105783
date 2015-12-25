@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "open2.4.0人脸", "open2.4.0人脸\open2.4.0人脸.vcxproj", "{7C6ED350-278F-4260-B8B6-CE75B9D46B9C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Debug|x64 = Debug|x64
+		Release|Win32 = Release|Win32
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7C6ED350-278F-4260-B8B6-CE75B9D46B9C}.Debug|Win32.ActiveCfg = Debug|Win32
+		{7C6ED350-278F-4260-B8B6-CE75B9D46B9C}.Debug|Win32.Build.0 = Debug|Win32
+		{7C6ED350-278F-4260-B8B6-CE75B9D46B9C}.Debug|x64.ActiveCfg = Debug|x64
+		{7C6ED350-278F-4260-B8B6-CE75B9D46B9C}.Debug|x64.Build.0 = Debug|x64
+		{7C6ED350-278F-4260-B8B6-CE75B9D46B9C}.Release|Win32.ActiveCfg = Release|Win32
+		{7C6ED350-278F-4260-B8B6-CE75B9D46B9C}.Release|Win32.Build.0 = Release|Win32
+		{7C6ED350-278F-4260-B8B6-CE75B9D46B9C}.Release|x64.ActiveCfg = Release|x64
+		{7C6ED350-278F-4260-B8B6-CE75B9D46B9C}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
