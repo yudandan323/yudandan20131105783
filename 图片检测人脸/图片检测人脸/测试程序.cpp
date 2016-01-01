@@ -21,7 +21,7 @@
 using namespace cv; 
 
 const char *pcascadeName = "E:\\opencv2.4.4\\data\\haarcascades\\haarcascade_frontalface_alt.xml"; //选择自己的安装目录
-const char *pImageName = "images8.jpg";  
+const char *pImageName = "images2.jpg";  
 void DetectAndMark();
 
 int main(int argc, const char** argv)  
