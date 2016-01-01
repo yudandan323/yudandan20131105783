@@ -30,17 +30,45 @@ void detectAndDisplay(Mat frame){
 
 }
 //实现将拍下来的图片缩放一倍
-IplImage* DoPyrDown(IplImage* image,int filter=IPL_GAUSSIAN_5x5)
+/*IplImage* DoPyrDown(IplImage* image,int filter=IPL_GAUSSIAN_5x5)
 {
 	CvSize size = cvSize(image->width / 2,image->height / 2);
 	IplImage* outImage = cvCreateImage(size,image->depth,image->nChannels); 
 	cvPyrDown(image,outImage);
 	cvReleaseImage(&image);  
     return outImage; 
-}
-int main( int argc, char** argv )  
+}*/
+int main(int argc, char** argv )  
 { 
-	CvCapture * capture;
+	VideoCapture cap(0);
+	if(!cap.isOpened())
+		return -1;
+	Mat edges;
+	if(!face_cascade.load(face_cascade_name)){
+		printf("[error]无法加载级联分类器文件！\n");
+		return -1;
+	}
+	int nTick=0;
+	for(;;)
+	{
+		if(!cap.isOpened())
+		{
+			continue;
+		}
+		Mat frame;
+		nTick=getTickCount();
+		cap>>frame;
+		if(frame.data==NULL)
+		{
+			continue;
+		}
+		cvtColor(frame,edges,CV_BGR2BGRA);
+		detectAndDisplay(edges);
+		if(waitKey(30)>=0)break;
+
+
+	}
+	/*CvCapture * capture;
 	if((capture = cvCreateCameraCapture(0))==NULL)
 	{
 		printf("Camera Open Fail!Please check your Camera.");
@@ -48,7 +76,7 @@ int main( int argc, char** argv )
 	}
 	 cvNamedWindow("Camera Show",CV_WINDOW_AUTOSIZE);
 	 IplImage * frame;
-	 cvWaitKey(300);
+	 cvWaitKey(300);2016.1.1*/
 	/*if(1 == argc)  
     {  
         capture = cvCreateCameraCapture(0);  
@@ -61,7 +89,7 @@ int main( int argc, char** argv )
     assert(NULL != capture); 
 	IplImage* frame;
 	*/
-	char keyCode;
+	/*char keyCode;
 	while((keyCode = cvWaitKey(30)))  
     {  
         //表示按下了ESC键，退出  
@@ -105,9 +133,11 @@ int main( int argc, char** argv )
 			  break;
 	 }
 	 cvReleaseCapture(&capture);
-	 cvDestroyAllWindows();*/
-	 cvReleaseImage(&frame);
-	 cvDestroyWindow("Camera Show");
+	 cvDestroyAllWindows();不是*/
+	 /*cvReleaseImage(&frame);
+	 cvDestroyWindow("Camera Show");*/
+	return 0;
+
 }   
 
 
